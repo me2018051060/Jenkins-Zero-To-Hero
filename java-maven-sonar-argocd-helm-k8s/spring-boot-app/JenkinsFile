@@ -51,7 +51,7 @@ pipeline {
             GIT_USER_NAME = "me2018051060"
         }
         steps {
-          dir('java-maven-sonar-argocd-helm-k8s')
+          dir('java-maven-sonar-argocd-helm-k8s'){
             withCredentials([string(credentialsId: 'github', variable: 'GITHUB_TOKEN')]) {
                 sh '''
                     git config user.email "mohitsinghdss@gmail.com"
@@ -63,6 +63,7 @@ pipeline {
                     git push https://${GITHUB_TOKEN}@github.com/${GIT_USER_NAME}/${GIT_REPO_NAME} HEAD:main
                 '''
             }
+          }
         }
     }
   }
