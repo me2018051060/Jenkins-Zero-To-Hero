@@ -3,7 +3,7 @@
 FROM maven:3.9.11-eclipse-temurin-21
 
 RUN apt-get update && \
-    apt-get install -y docker.io
+    apt-get install -y git docker.io
 
 
 # Simply the artifact path
