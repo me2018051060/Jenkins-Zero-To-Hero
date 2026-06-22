@@ -10,7 +10,7 @@ pipeline {
       stage('Checkout') {
           steps {
              git branch: 'main',
-                  url: 'https://github.com/me2018051060/Jenkins-Zero-To-Hero/main/java-maven-sonar-argocd-helm-k8s/spring-boot-app'
+                  url: 'https://github.com/me2018051060/Jenkins-Zero-To-Hero.git'
           }
       }
         stage('Build Docker Image') {
