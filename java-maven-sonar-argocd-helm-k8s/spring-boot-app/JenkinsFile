@@ -1,8 +1,8 @@
 pipeline {
   agent {
     docker {
-      image 'eonshim/spring-boot-demo'
-      args '--user root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
+      image 'maven:3.9.11-eclipse-temurin-21'
+        args '-u root -v /var/run/docker.sock:/var/run/docker.sock' // mount Docker socket to access the host's Docker daemon
     }
   }
   stages {
